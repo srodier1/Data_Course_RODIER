@@ -7,3 +7,4 @@ what happens if I try to add more before I push?
 it looks like if I say 3rd commit instead of 1st commit, it doesn't make any difference and if I add more before I activate the push action, then it will just add it as well.
 I am going to attempt to remove this git add
 I will conquer you github repository
+. I don't know what I'm doing and I know it, therefore I am a scientist
