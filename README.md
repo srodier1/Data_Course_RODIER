@@ -8,3 +8,4 @@ it looks like if I say 3rd commit instead of 1st commit, it doesn't make any dif
 I am going to attempt to remove this git add
 I will conquer you github repository
 . I don't know what I'm doing and I know it, therefore I am a scientist
+I dont know what I am doing, and I know it, therefore I am a scientist
