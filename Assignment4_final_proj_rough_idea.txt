@@ -1,6 +1,0 @@
-My Final project idea is to analyze the relationships between various mammals sleep cycles
-and several variables including brain weight, climate, place in the food chain etc. 
-I will pull data from kaggle and other reputable sources and compile on R studios. I will 
-the mutate() function to compile all of my data (unless there is a better way to do that)
-My data will be numerical as well as catagorical.
-I wonder if it's possible to determine the strength of the different variables in predicting the total amount of sleep!

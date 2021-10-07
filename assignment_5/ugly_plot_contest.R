@@ -18,4 +18,4 @@ mam %>%
                                    size=14, angle=45),
         panel.background = element_rect(fill = "salmon2"),
         panel.grid.major.x = element_blank())
-
+ 
