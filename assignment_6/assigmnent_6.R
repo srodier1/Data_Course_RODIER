@@ -1,7 +1,9 @@
-setwd("Data_Course_RODIER")
+setwd("../Data_Course_RODIER")
 library(dplyr)
 library(tidyverse)
 library(ggplot2)
+library(gganimate)
+library(lubridate)
 
 list.files("assignment_6", full.names = TRUE)
 
@@ -31,3 +33,24 @@ BioLog %>%
              y = "Absorbance") +
   ggtitle("Just Dilution 0.1")
 
+
+BioLog <- BioLog %>%
+  rename("hr" = "Time_hours")
+
+p <- BioLog %>%
+  filter(Substrate == "Itaconic Acid") %>%
+  select(Sample.ID, Dilution, Substrate, hour, Rep, Light_absorb, seq_along(hour)) %>%
+  group_by(Rep, Dilution, Sample.ID, hour) %>%
+  summarize(mean_absorbance = mean(Light_absorb), hour, Sample.ID)%>% 
+  ggplot(aes(x = hour, y = mean_absorbance, color = Sample.ID)) +
+  geom_smooth(se = FALSE) +
+  facet_wrap(~Dilution) 
+
+
+
+
+
+class(BioLog$hour)
+p + transition_reveal(hour)
+p    
+   
