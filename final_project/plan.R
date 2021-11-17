@@ -12,19 +12,30 @@ names(df)
   #it can mean dalys, cancer prevalence, depressive disorders, life expectancy
 
   
-  #I should get total cancer deaths as opposed to breaking it down to specific cancer deaths
 names(df)
 
+#Each entity only has one year with an entry for continent.
+#How an I add that same continent to each observation for that entity(country)
+
+#take all NA values in column and assign them the value in continent for year 2015
+ for (x in df$entity) {
+ 
+  
+  none <- small %>% 
+    is.na(continent)
+    group_by(entity) 
+    
+  val <- df %>% 
+    select(entity, year, continent) %>% 
+    group_by(entity) %>%
+    filter(year == 2015)
+}
 
 
 
 
 
-
-
-
-
-
+is.na(df$continent, value = df$entity)
 
 
 
