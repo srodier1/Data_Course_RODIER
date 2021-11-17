@@ -15,6 +15,22 @@ names(df)
   #I should get total cancer deaths as opposed to breaking it down to specific cancer deaths
 names(df)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 mod1 <- glm(data = df,
     formula = life_expectancy ~ kg_apple_prod_capita_year*fruit_consumed_kg_pc_year*cal_frm_plnt_prot)
 summary(mod1)
