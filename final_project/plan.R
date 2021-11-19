@@ -18,24 +18,16 @@ names(df)
 #How an I add that same continent to each observation for that entity(country)
 
 #take all NA values in column and assign them the value in continent for year 2015
- for (x in df$entity) {
- 
-  
-  none <- small %>% 
-    is.na(continent)
-    group_by(entity) 
+ for (x in is.na(df$continent)) {
+ x <- df %>%
+   filter()
     
-  val <- df %>% 
-    select(entity, year, continent) %>% 
-    group_by(entity) %>%
-    filter(year == 2015)
+ }
+
+is.it.true <- function(x) {
+  
+  if(x == TRUE) {x = !is.na(continent)}
 }
-
-
-
-
-
-is.na(df$continent, value = df$entity)
 
 
 

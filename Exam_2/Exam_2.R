@@ -3,6 +3,7 @@ library(ggplot2)
 library(tidyverse)
 library(zoo)
 options(scipen = 999)
+setwd("../")
 list.files("Exam_2", full.names = TRUE)
 #I.
 land_data <- read.csv("Exam_2/landdata-states.csv")
@@ -26,7 +27,23 @@ unicef %>%
   ggplot(aes(x = Year, y = U5MR, color = Continent )) +
   geom_point(size = 2)+
   ylab(element_text("Mortality Rate")) +
-  theme(panel.grid.major = element_blank()) 
+  theme(panel.grid.major = element_blank())
+
+
 
 glimpse(unicef)
+unicef %>%
+  group_by(Continent, Year) %>%
+  na.omit() %>%
+  summarize("mean_mortality"= mean(U5MR)) %>%
+  ggplot( aes(x = Year, y = mean_mortality, color = Continent)) +
+  geom_line(size = 3) +
+  ylab( element_text("Mean Mortality Rate (deaths per 1000 live births)"))  
 
+#V.
+unicef %>%
+  mutate("proportion" = U5MR / 1000) %>%
+  ggplot(aes(x = Year, y = proportion ))+
+  geom_point(colour = "blue") +
+  facet_wrap(~Region)
+colors()

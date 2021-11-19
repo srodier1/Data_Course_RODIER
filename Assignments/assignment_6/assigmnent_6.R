@@ -4,6 +4,7 @@ library(tidyverse)
 library(ggplot2)
 library(gganimate)
 library(lubridate)
+library(patchwork)
 
 list.files("assignment_6", full.names = TRUE)
 

@@ -1,0 +1,72 @@
+---
+title: "My first RMD"
+output: html_document
+---
+
+mpg = mtcars
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Anything not in a code chunk is just text in report
+
+# Anything not in a code chunk is just text in report
+
+## Anything not in a code chunk is just text in report
+
+### Anything not in a code chunk is just text in report
+
+
+#### Anything not in a code chunk is just text in report
+
+##### Anything not in a code chunk is just text in report
+
+Anything in a code chunk is ran as code
+
+more hashtags means smaller text. 
+
+if i click the +c thing in the corner it adds a code chunk
+
+include = FALSE - doesn't show the code in the report,
+
+warning = FALSE - doesn't show the warnings R gives you about your code
+
+echo = FALSE - don't show the code I used, but show figures
+
+```{r, include = FALSE, echo = FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(modelr)
+library(easystats)
+
+library(kableExtra)
+
+```
+
+
+Anything past hitting enter twice won't register as space
+
+creates a break
+<br><br><br><br>
+
+
+after the break
+
+
+<br><br>
+```{r, echo = FALSE, message = FALSE, fig.width= 10, fig.height= 3}
+mpg %>%
+  ggplot(aes(x = displ, y = cty)) + 
+  geom_smooth()
+```
+
+
+Explore the mpg dataset a bit:
+```{r}
+mpg %>% glimpse 
+print("The first 10 rows")
+firstten <- mpg%>% head(10)
+kable(firstten)
+```
+
+
