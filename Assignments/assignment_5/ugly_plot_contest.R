@@ -2,7 +2,8 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(ggimage)
-mam <- read.csv("../Data_Course_RODIER/mammals.csv")
+
+mam <- read.csv("assignment_5/mammals.csv")
 
 mam %>%
   ggplot(aes(x = species, y = total_sleep, color = predation)) +

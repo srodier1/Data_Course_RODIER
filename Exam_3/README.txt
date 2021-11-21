@@ -23,7 +23,7 @@ fig1.png              # Need to recreate this figure (see instructions)
 Tasks:
   
 I.      Load and clean FacultySalaries_1995.csv file
-Re-create the graph shown in "fig1.png"
+Re-create the graph shown in "fig1.png""
 Export it to your Exam_3 folder as LASTNAME_Fig_1.jpg (note, that's a jpg, not a png)
 Please pay attention to what variables are on this graph.  This task is really all about whether you can make a tidy dataset out of something a bit wonky. Refer back to the video where we cleaned "Bird_Measurements.csv"
 

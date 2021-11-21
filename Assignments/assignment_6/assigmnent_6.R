@@ -1,4 +1,3 @@
-setwd("../Data_Course_RODIER")
 library(dplyr)
 library(tidyverse)
 library(ggplot2)
@@ -7,7 +6,6 @@ library(lubridate)
 library(patchwork)
 
 list.files("assignment_6", full.names = TRUE)
-
 BioLog <- read.csv("assignment_6/BioLog_Plate_Data.csv")
 
 BioLog <-BioLog %>%

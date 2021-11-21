@@ -1,7 +1,8 @@
 library(tidyverse)
 csv_files <- list.files(path = "Data", recursive = TRUE pattern = ".csv")
 length(csv_files)
-df <- read.csv("Data/wingspan_vs_mass.csv")
+df <- read.csv("../../Data_Course/Data/wingspan_vs_mass.csv")
+
 df %>%
   head(5)
 dat<-list.files(path = "Data", recursive = TRUE, pattern = "^b",full.names = TRUE)
