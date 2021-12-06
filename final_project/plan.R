@@ -1,7 +1,7 @@
 library(tidyverse)
 library(modelr)
 df <- read.csv("merged_data.csv")
-names(df)
+unique(df$entity)
 
 #does an apple/day keep the doctor away?
   
@@ -10,8 +10,28 @@ names(df)
   
   #what does keep the doctor away mean? 
   #it can mean dalys, cancer prevalence, depressive disorders, life expectancy
+df %>% 
+  filter(entity == "Afghanistan") %>% 
+  select(year) %>% 
+  unique()
 
+
+#problems
+#1)continent is NA for all except 2015
+#2)unique(year [for afghanistan]) has less values than 
+
+df %>% 
+  filter(entity == "Afghanistan") %>% 
+  ggplot(aes(x = year))+
+  geom_histogram()
+
+
+
+af <- df %>% 
+  filter(entity == "Afghanistan") 
   
+df$year %>% table %>% plot
+df %>% glimpse
 names(df)
 
 #Each entity only has one year with an entry for continent.

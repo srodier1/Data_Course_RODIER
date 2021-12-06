@@ -1,0 +1,63 @@
+---
+title: "Final Project"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, error = FALSE, warning = FALSE)
+library(tidyverse)
+df <- read.csv("merged_data.csv")
+```
+
+Does an apple/day keep the doctor away?
+  
+  What will an apple/day mean?
+  Fruit consumed kgs/capita/year, cal from plant protein, calories from animal protein, calories from fat
+  
+  What does keep the doctor away mean? 
+  It can mean dalys, cancer prevalence, depressive disorders, life expectancy.
+  
+My first question is: is our data normalized? 
+
+```{r}
+ind <- data.frame(df$kg_apple_prod_capita_year, df$cal_frm_plnt_prot, df$fruit_consumed_kg_pc_year, df$cal_frm_animl_prot, df$cal_frm_fat)
+skewness(df$kg_apple_prod_capita_year)
+```
+
+
+
+```{r}
+df %>% 
+  filter(year == 2005) %>% 
+  ggplot(aes(x = kg_apple_prod_capita_year))+
+  geom_histogram()
+
+  df %>% 
+  filter(year == 2005) %>% 
+  ggplot(aes(x = cal_frm_plnt_prot))+
+  geom_histogram()
+
+
+df %>% 
+  filter(year == 2005) %>% 
+  ggplot(aes(x = fruit_consumed_kg_pc_year))+
+  geom_histogram()
+
+
+df %>% 
+  filter(year == 2005) %>% 
+  ggplot(aes(x = cal_frm_animl_prot))+
+  geom_histogram()
+
+df %>% 
+  filter(year == 2005) %>% 
+  ggplot(aes(x = cal_frm_fat))+
+  geom_histogram()
+
+
+for (i in independant_variable) {
+  return(as.list(skewness(i))
+}
+```
+The data appears to be strongly skewed to the left with apples produced, calories from animal protein, and total fruit consumed per year. I am going to normalize my skewed distributions, 
+

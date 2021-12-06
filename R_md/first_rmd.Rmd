@@ -3,7 +3,6 @@ title: "My first RMD"
 output: html_document
 ---
 
-mpg = mtcars
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

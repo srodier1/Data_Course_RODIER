@@ -107,27 +107,17 @@ df <- df %>%
           year,
           total_pop,                                                                                    
           continent,
-         life_expectancy,
-          deaths_neoplasms,
-         daly,
-        percent_prevalence_depressive_disorders,                                                                 
-          kg_banana_capita_year,                                                                        
-          kg_dates_capita_year,                                                                         
-          kg_citrus_other_capita_year,                                                                  
-          kg_orng_mand_capita_year,                                                                     
          kg_apple_prod_capita_year,                                                                    
-          kg_lemon_lime_capita_year,                                                                    
-         kg_grape_capita_year,                                                                         
-          kg_grapefrt_prod_capita_year,                                                                 
-          kg_pineapple_prod_capita_year,                                                                
-          kg_plantains_capita_year,                                                                     
-          kg_other_frt_capita_year,
           cal_frm_animl_prot,                                                                          
           cal_frm_plnt_prot,                                                                            
           cal_frm_fat,                                                                                  
           cal_frm_carbs,
          fruit_consumed_kg_pc_year,                                                                    
-          gdp_capita_year)
+          gdp_capita_year,
+         life_expectancy,
+         deaths_neoplasms,
+         daly,
+         percent_prevalence_depressive_disorders,)
                                                                                      
           
 

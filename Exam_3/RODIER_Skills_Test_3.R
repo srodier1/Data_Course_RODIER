@@ -1,8 +1,6 @@
 library(tidyverse)
 library(janitor)
 library(dplyr)
-install.packages(broom)
-update.packages(broom)
 library(broom)
 
 #I. 
