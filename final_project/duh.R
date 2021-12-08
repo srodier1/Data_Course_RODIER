@@ -1,25 +1,13 @@
 library(moments)
 library(dplyr)
+library(tidyverse)
 
 df <- read.csv("merged_data.csv")
 
-names(df)
-var <- select(df, -c(entity, total_pop, year, continent))
-col <- data.frame(names(var))
 
-skew <- data.frame(col, apply(var, 2, skewness, na.rm = TRUE))
-names(skew)
-beep <- filter(skew, !between(skew$apply.var..2..skewness..na.rm...TRUE., -0.6, 0.6))
+LY <- df %>% 
+  select(life_expectancy, year) %>% 
+  na.omit()
 
 df %>% 
-  mutate()
-
-norm <- df %>% select(unique(beep$col)) %>% 
-  apply(2, sqrt)
-
-for (i in var){
-  a <- skewness(i, na.rm = TRUE)
-  data.frame(a)
-}
-
- 
+  filter(year %in% (2000:2019))
